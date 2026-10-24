@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chama Burguer</title>
+    <!-- biblioteca de icones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
+
 <body>
     <header class="cabecalho-site">
         <nav class="barr-navegacao">
@@ -20,7 +24,7 @@
             <!-- aria-label="Abrir menu" - acessibilidade que emite o som -->
             <!-- <img src="assets/images/burger-menu.svg" alt="≡"> -->
             <button class="menu-abrir" id="menuAbrir" aria-label="Abrir menu">≡</button>
-        </nav>        
+        </nav>
     </header>
 
     <main>
@@ -37,7 +41,8 @@
                     <a href="#cardapio" class="botao botao-primario">Ver cardápio</a>
                 </div>
                 <div class="destaque-imagem">
-                    <img src="assets/images/destaque-burger.jpg" alt="Hambúrguer artesanal com bacon, queijo e pão brioche, grelhado na brasa">
+                    <img src="assets/images/destaque-burger.jpg"
+                        alt="Hambúrguer artesanal com bacon, queijo e pão brioche, grelhado na brasa">
                 </div>
             </div>
         </section>
@@ -47,12 +52,14 @@
             <div class="cardapio-itens">
                 <article class="cardapio-item">
                     <div class="cardapio-item-imagem">
-                        <img src="assets/images/burger-classico.jpg" alt="Foto do burger Clássico: pão brioche, carne e queijo">
+                        <img src="assets/images/burger-classico.jpg"
+                            alt="Foto do burger Clássico: pão brioche, carne e queijo">
                     </div>
                     <h3>Clássico</h3>
                     <p>Pão brioche, carne 160g, queijo, alface e tomate.</p>
                     <span class="preco">R$ 24,90</span>
-                    <button class="adicionar-carrinho" data-name="Clássico" data-preco="24.90">Adicionar ao pedido</button>
+                    <button class="adicionar-carrinho" data-name="Clássico" data-preco="24.90">Adicionar ao
+                        pedido</button>
                 </article>
 
                 <article class="cardapio-item">
@@ -63,17 +70,20 @@
                     <h3>Bacon</h3>
                     <p>Tudo do clássico + fatias generosas de bacon crocante.</p>
                     <span class="preco">R$ 28,90</span>
-                    <button class="adicionar-carrinho" data-name="Clássico" data-preco="24.90">Adicionar ao pedido</button>
+                    <button class="adicionar-carrinho" data-name="Clássico" data-preco="24.90">Adicionar ao
+                        pedido</button>
                 </article>
 
                 <article class="cardapio-item">
                     <div class="cardapio-item-imagem">
-                        <img src="assets/images/burger-veggie.jpg" alt="Foto do burger Veggie com grão-de-bico e salada">
+                        <img src="assets/images/burger-veggie.jpg"
+                            alt="Foto do burger Veggie com grão-de-bico e salada">
                     </div>
                     <h3>Veggie</h3>
                     <p>Hambúrguer de grão-de-bico, queijo, alface e cebola roxa.</p>
                     <span class="preco">R$ 26,90</span>
-                    <button class="adicionar-carrinho" data-name="Clássico" data-preco="24.90">Adicionar ao pedido</button>
+                    <button class="adicionar-carrinho" data-name="Clássico" data-preco="24.90">Adicionar ao
+                        pedido</button>
                 </article>
 
                 <article class="cardapio-item">
@@ -84,7 +94,8 @@
                     <h3>Combo Fritas + Refri</h3>
                     <p>Fritas crocantes e um refrigerante gelado pra completar.</p>
                     <span class="preco">R$ 12,90</span>
-                    <button class="adicionar-carrinho" data-name="Clássico" data-preco="24.90">Adicionar ao pedido</button>
+                    <button class="adicionar-carrinho" data-name="Clássico" data-preco="24.90">Adicionar ao
+                        pedido</button>
                 </article>
             </div>
         </section>
@@ -96,7 +107,9 @@
             <div class="sobre-texto">
                 <span class="secao-rotulo">Nossa História</span>
                 <h2>Comida de boteco, com capricho de restaurante</h2>
-                <p>O Chama Burger começou numa churrasqueira de quintal, testando receitas com os amigos. Hoje, o método continua o mesmo: carne grelhada na brasa, pão fresco do dia e ingredientes comprados na feira — só que agora pra atender o bairro inteiro.</p>
+                <p>O Chama Burger começou numa churrasqueira de quintal, testando receitas com os amigos. Hoje, o método
+                    continua o mesmo: carne grelhada na brasa, pão fresco do dia e ingredientes comprados na feira — só
+                    que agora pra atender o bairro inteiro.</p>
                 <a href="#cardapio" class="link-seta">Ver cardápio completo →</a>
             </div>
         </section>
@@ -130,9 +143,85 @@
                     <p class="autor">Thiago Lima <span>— cliente de evento</span></p>
                 </article>
             </div>
-
         </section>
 
+        <section class="reserva" id="reserva">
+            <h2> Reserve sua mesa </h2>
+            <p>Prefere comer no salão? Deixe seus dados, que confirmamos por telefone.</p>
+            <form class="reserva-formulario" id="reservaFormulario">
+                <div class="linha-formulario">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+                </div>
+
+                <div class="linha-formulario">
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(11)99999-9999" required>
+                </div>
+
+                <div class="linha-formulario">
+                    <label for="data">Data</label>
+                    <input type="date" id="data" name="data" required>
+                </div>
+
+                <div class="linha-formulario">
+                    <label for="pessoas">Número de reservas</label>
+                    <select type="pessoas" id="pessoas">
+                        <option value="1">1 pessoa</option>
+                        <option value="2">2 pessoas</option>
+                        <option value="3">3 pessoas</option>
+                        <option value="4">4 pessoas</option>
+                        <option value="5">5 ou mais pessoas</option>
+                    </select>
+                </div>
+
+                <div class="linha-formulario linha-formulario-completa">
+                    <label for="pessoas">Observaçóes {opcional)</label>
+                    <textarea name="mesagem" id="mensagem" rows="3"
+                        placeholder="Alguma preferëncia ou restrição alimentar"></textarea>
+                </div>
+
+                <div class="linha-formulario linha-formulario-completa">
+                    <label for="foto">Foto de referência {opcional)</label>
+                    <input type="file" id="foto" name="foto" accept="image/*">
+                    <img id="fotoPrevia" class="foto-previa" alt="Prévia da imagem selecionada" hidden>
+                </div>
+
+                <button type="submit" class="botao botao-primario formulario-enviar">CONFIRMAR RESERVA</button>
+            </form>
+
+            <div class="reserva-confirmacao" id="reservaConfirmacao">
+            </div>
+        </section>
+
+        <section class="chamada-final" id="pedir">
+            <h2>Bateu a fome?</h2>
+            <p>Peça pelo delivery ou venha comer no salão — abrimos todos os dias, das 18h à meia-noite.</p>
+            <a href="#" class="botao botao-destaque">Peça pelo WhatsApp</a>
+        </section>
     </main>
+
+    <footer class="roda-site" id="contato">
+        <div class="rodape-info">
+            <p>&copy; 2026 Chama Burger — Rua das Brasas, 123, São Caetano do Sul</p>
+            <p class="rodape=horario">Todos os dias, das 18h a meia-noite</p>
+        </div>
+
+        <!-- identar tudo Ctrl + Alt + F -->
+
+        <ul class="rodape-links">
+            <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i><span>Instagram</span></a></li>
+            <li><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i><span>Facebook</span></a></li>
+            <li><a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i><span>WhatsApp</span></a></li>
+            <li><a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i><span>TikTok</span></a></li>
+            <li><a href="#" aria-label="Ver no mapa"><i class="fa-solid fa-location-dot"></i><span>Ver no mapa</span></a></li>
+        </ul>
+    </footer>
+
+    <div class="carrinho-resumo" id="carrinhoResumo">
+        <span class="carrinho-icone">🛒</span>
+        <span id="carrinhoContador">0</span> itens . <span id="carrinhoTotal">R$ 0,00</span>
+    </div>
 </body>
+
 </html>
